@@ -19,7 +19,6 @@ namespace FTS.Model.Entities
         public PositionType PositionType { get; set; }
         public int SalaryFrom { get; set; }
         public int SalaryTo { get; set; }
-        public int Salary1To { get; set; }
 
     }
 }
