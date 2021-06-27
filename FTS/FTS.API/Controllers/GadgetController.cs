@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FTS.Model.Entities;
+using FTS.Service.IServices;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FTS.API.Controllers
 {
@@ -11,5 +9,41 @@ namespace FTS.API.Controllers
     [ApiController]
     public class GadgetController : ControllerBase
     {
+
+        private IGadgetService _gadgetService ;
+        public GadgetController(IGadgetService gadgetService)
+        {
+            _gadgetService = gadgetService;
+        }
+
+        [HttpGet]
+        public IEnumerable<Gadgets> GetAll()
+        {
+            return _gadgetService.GetAll();
+        }
+
+        [HttpGet("{id}")]
+        public Gadgets GetById(long id)
+        {
+            return _gadgetService.GetById(id);
+        }
+
+        [HttpPost]
+        public void Post([FromBody] Gadgets user)
+        {
+            _gadgetService.Insert(user);
+        }
+
+        [HttpPut("{id}")]
+        public void Put(long id, [FromBody] Gadgets user)
+        {
+            _gadgetService.Update(user);
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(long id)
+        {
+            _gadgetService.Delete(id);
+        }
     }
 }

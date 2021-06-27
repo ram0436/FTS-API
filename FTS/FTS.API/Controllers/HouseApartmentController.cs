@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FTS.Model.Entities;
+using FTS.Service.IServices;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FTS.API.Controllers
 {
@@ -11,5 +9,41 @@ namespace FTS.API.Controllers
     [ApiController]
     public class HouseApartmentController : ControllerBase
     {
+
+        private IHouseApartmentService _houseApartmentService ;
+        public HouseApartmentController(IHouseApartmentService houseApartmentService)
+        {
+            _houseApartmentService = houseApartmentService;
+        }
+
+        [HttpGet]
+        public IEnumerable<HouseApartments> GetAll()
+        {
+            return _houseApartmentService.GetAll();
+        }
+
+        [HttpGet("{id}")]
+        public HouseApartments GetById(long id)
+        {
+            return _houseApartmentService.GetById(id);
+        }
+
+        [HttpPost]
+        public void Post([FromBody] HouseApartments user)
+        {
+            _houseApartmentService.Insert(user);
+        }
+
+        [HttpPut("{id}")]
+        public void Put(long id, [FromBody] HouseApartments user)
+        {
+            _houseApartmentService.Update(user);
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(long id)
+        {
+            _houseApartmentService.Delete(id);
+        }
     }
 }

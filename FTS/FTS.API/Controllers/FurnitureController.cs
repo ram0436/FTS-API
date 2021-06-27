@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FTS.Model.Entities;
+using FTS.Service.IServices;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FTS.API.Controllers
 {
@@ -11,5 +9,41 @@ namespace FTS.API.Controllers
     [ApiController]
     public class FurnitureController : ControllerBase
     {
+
+        private IFurnitureService _furnitureService ;
+        public FurnitureController(IFurnitureService furnitureService)
+        {
+            _furnitureService = furnitureService;
+        }
+
+        [HttpGet]
+        public IEnumerable<Furnitures> GetAll()
+        {
+            return _furnitureService.GetAll();
+        }
+
+        [HttpGet("{id}")]
+        public Furnitures GetById(long id)
+        {
+            return _furnitureService.GetById(id);
+        }
+
+        [HttpPost]
+        public void Post([FromBody] Furnitures user)
+        {
+            _furnitureService.Insert(user);
+        }
+
+        [HttpPut("{id}")]
+        public void Put(long id, [FromBody] Furnitures user)
+        {
+            _furnitureService.Update(user);
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(long id)
+        {
+            _furnitureService.Delete(id);
+        }
     }
 }

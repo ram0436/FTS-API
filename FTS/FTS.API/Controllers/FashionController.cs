@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FTS.Model.Entities;
+using FTS.Service.IServices;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FTS.API.Controllers
 {
@@ -11,5 +9,41 @@ namespace FTS.API.Controllers
     [ApiController]
     public class FashionController : ControllerBase
     {
+
+        private IFashionService _fashionService ;
+        public FashionController(IFashionService fashionService)
+        {
+            _fashionService = fashionService;
+        }
+
+        [HttpGet]
+        public IEnumerable<Fashion> GetAll()
+        {
+            return _fashionService.GetAll();
+        }
+
+        [HttpGet("{id}")]
+        public Fashion GetById(long id)
+        {
+            return _fashionService.GetById(id);
+        }
+
+        [HttpPost]
+        public void Post([FromBody] Fashion user)
+        {
+            _fashionService.Insert(user);
+        }
+
+        [HttpPut("{id}")]
+        public void Put(long id, [FromBody] Fashion user)
+        {
+            _fashionService.Update(user);
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(long id)
+        {
+            _fashionService.Delete(id);
+        }
     }
 }

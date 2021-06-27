@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FTS.Model.Entities;
+using FTS.Service.IServices;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FTS.API.Controllers
 {
@@ -11,5 +9,41 @@ namespace FTS.API.Controllers
     [ApiController]
     public class LandPlotController : ControllerBase
     {
+
+        private ILandPlotService _landPlotService ;
+        public LandPlotController(ILandPlotService landPlotService)
+        {
+            _landPlotService = landPlotService;
+        }
+
+        [HttpGet]
+        public IEnumerable<LandPlots> GetAll()
+        {
+            return _landPlotService.GetAll();
+        }
+
+        [HttpGet("{id}")]
+        public LandPlots GetById(long id)
+        {
+            return _landPlotService.GetById(id);
+        }
+
+        [HttpPost]
+        public void Post([FromBody] LandPlots user)
+        {
+            _landPlotService.Insert(user);
+        }
+
+        [HttpPut("{id}")]
+        public void Put(long id, [FromBody] LandPlots user)
+        {
+            _landPlotService.Update(user);
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(long id)
+        {
+            _landPlotService.Delete(id);
+        }
     }
 }
