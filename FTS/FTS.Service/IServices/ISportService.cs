@@ -11,10 +11,10 @@ namespace FTS.Service.IServices
 
     {
         IEnumerable<Sports> GetAll();
-        Sports GetById(long userId);
+        Sports GetById(long id);
         void Insert(Sports obj);
         void Update(Sports obj);
-        void Delete(long userId);
+        void Delete(long id);
 
     }
 }

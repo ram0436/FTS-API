@@ -10,10 +10,10 @@ namespace FTS.Service.IServices
     public interface IBookService
     {
         IEnumerable<Books> GetAll();
-        Books GetById(long userId);
+        Books GetById(long id);
         void Insert(Books obj);
         void Update(Books obj);
-        void Delete(long userId);
+        void Delete(long id);
 
     }
 }

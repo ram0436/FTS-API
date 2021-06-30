@@ -11,10 +11,10 @@ namespace FTS.Service.IServices
 
     {
         IEnumerable<Furnitures> GetAll();
-        Furnitures GetById(long userId);
+        Furnitures GetById(long id);
         void Insert(Furnitures obj);
         void Update(Furnitures obj);
-        void Delete(long userId);
+        void Delete(long id);
 
     }
 }

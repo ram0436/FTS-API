@@ -11,10 +11,10 @@ namespace FTS.Service.IServices
 
     {
         IEnumerable<Fashion> GetAll();
-        Fashion GetById(long userId);
+        Fashion GetById(long id);
         void Insert(Fashion obj);
         void Update(Fashion obj);
-        void Delete(long userId);
+        void Delete(long id);
 
     }
 }

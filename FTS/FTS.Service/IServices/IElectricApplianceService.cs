@@ -11,10 +11,10 @@ namespace FTS.Service.IServices
 
     {
         IEnumerable<ElectricAppliances> GetAll();
-        ElectricAppliances GetById(long userId);
+        ElectricAppliances GetById(long id);
         void Insert(ElectricAppliances obj);
         void Update(ElectricAppliances obj);
-        void Delete(long userId);
+        void Delete(long id);
 
     }
 }

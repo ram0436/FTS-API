@@ -10,10 +10,10 @@ namespace FTS.Service.IServices
     public interface IVehicleService
     {
         IEnumerable<Vehicles> GetAll();
-        Vehicles GetById(long userId);
+        Vehicles GetById(long id);
         void Insert(Vehicles obj);
         void Update(Vehicles obj);
-        void Delete(long userId);
+        void Delete(long id);
 
     }
 }

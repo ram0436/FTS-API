@@ -11,10 +11,10 @@ namespace FTS.Service.IServices
 
     {
         IEnumerable<LandPlots> GetAll();
-        LandPlots GetById(long userId);
+        LandPlots GetById(long id);
         void Insert(LandPlots obj);
         void Update(LandPlots obj);
-        void Delete(long userId);
+        void Delete(long id);
 
     }
 }

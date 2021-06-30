@@ -11,10 +11,10 @@ namespace FTS.Service.IServices
 
     {
         IEnumerable<Pets> GetAll();
-        Pets GetById(long userId);
+        Pets GetById(long id);
         void Insert(Pets obj);
         void Update(Pets obj);
-        void Delete(long userId);
+        void Delete(long id);
 
     }
 }

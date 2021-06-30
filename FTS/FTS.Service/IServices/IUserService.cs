@@ -10,10 +10,10 @@ namespace FTS.Service.IServices
     public interface IUserService
     {
         IEnumerable<Users> GetAll();
-        Users GetById(long userId);
+        Users GetById(long id);
         void Insert(Users obj);
         void Update(Users obj);
-        void Delete(long userId);
+        void Delete(long id);
 
     }
 }

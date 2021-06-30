@@ -11,10 +11,10 @@ namespace FTS.Service.IServices
 
     {
         IEnumerable<Jobs> GetAll();
-        Jobs GetById(long userId);
+        Jobs GetById(long id);
         void Insert(Jobs obj);
         void Update(Jobs obj);
-        void Delete(long userId);
+        void Delete(long id);
 
     }
 }

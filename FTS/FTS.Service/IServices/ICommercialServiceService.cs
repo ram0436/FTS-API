@@ -10,10 +10,10 @@ namespace FTS.Service.IServices
     public interface ICommercialServiceService
     {
         IEnumerable<CommercialServices> GetAll();
-        CommercialServices GetById(long userId);
+        CommercialServices GetById(long id);
         void Insert(CommercialServices obj);
         void Update(CommercialServices obj);
-        void Delete(long userId);
+        void Delete(long id);
 
     }
 }

@@ -11,10 +11,10 @@ namespace FTS.Service.IServices
 
     {
         IEnumerable<Gadgets> GetAll();
-        Gadgets GetById(long userId);
+        Gadgets GetById(long id);
         void Insert(Gadgets obj);
         void Update(Gadgets obj);
-        void Delete(long userId);
+        void Delete(long id);
 
     }
 }
