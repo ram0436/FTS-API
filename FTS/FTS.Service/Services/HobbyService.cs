@@ -20,17 +20,17 @@ namespace FTS.Service.Services
         {
             return _hobbyRepository.GetAll();
         }
-        public Hobbies GetById(long userId)
+        public Hobbies GetById(long id)
         {
-            return _hobbyRepository.GetById(userId);
+            return _hobbyRepository.GetById(id);
         }
-        public void Insert(Hobbies user)
+        public void Insert(Hobbies hobby)
         {
-            _hobbyRepository.Insert(user);
+            _hobbyRepository.Insert(hobby);
         }
-        public void Update(Hobbies user)
+        public void Update(Hobbies hobby)
         {
-            _hobbyRepository.Update(user);
+            _hobbyRepository.Update(hobby);
         }
 
         public void Delete(long id)

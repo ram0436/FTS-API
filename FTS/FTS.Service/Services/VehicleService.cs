@@ -20,17 +20,17 @@ namespace FTS.Service.Services
         {
             return _vehicleRepository.GetAll();
         }
-        public Vehicles GetById(long userId)
+        public Vehicles GetById(long id)
         {
-            return _vehicleRepository.GetById(userId);
+            return _vehicleRepository.GetById(id);
         }
-        public void Insert(Vehicles user)
+        public void Insert(Vehicles vehicle)
         {
-            _vehicleRepository.Insert(user);
+            _vehicleRepository.Insert(vehicle);
         }
-        public void Update(Vehicles user)
+        public void Update(Vehicles vehicle)
         {
-            _vehicleRepository.Update(user);
+            _vehicleRepository.Update(vehicle);
         }
 
         public void Delete(long id)

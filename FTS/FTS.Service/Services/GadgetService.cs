@@ -20,17 +20,17 @@ namespace FTS.Service.Services
         {
             return _gadgetRepository.GetAll();
         }
-        public Gadgets GetById(long userId)
+        public Gadgets GetById(long id)
         {
-            return _gadgetRepository.GetById(userId);
+            return _gadgetRepository.GetById(id);
         }
-        public void Insert(Gadgets user)
+        public void Insert(Gadgets gadget)
         {
-            _gadgetRepository.Insert(user);
+            _gadgetRepository.Insert(gadget);
         }
-        public void Update(Gadgets user)
+        public void Update(Gadgets gadget)
         {
-            _gadgetRepository.Update(user);
+            _gadgetRepository.Update(gadget);
         }
 
         public void Delete(long id)

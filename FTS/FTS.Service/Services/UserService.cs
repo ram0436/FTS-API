@@ -20,9 +20,9 @@ namespace FTS.Service.Services
         {
             return _userRepository.GetAll();
         }
-        public Users GetById(long userId)
+        public Users GetById(long id)
         {
-            return _userRepository.GetById(userId);
+            return _userRepository.GetById(id);
         }
         public void Insert(Users user)
         {

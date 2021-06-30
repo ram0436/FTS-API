@@ -20,17 +20,17 @@ namespace FTS.Service.Services
         {
             return _landPlotRepository.GetAll();
         }
-        public LandPlots GetById(long userId)
+        public LandPlots GetById(long id)
         {
-            return _landPlotRepository.GetById(userId);
+            return _landPlotRepository.GetById(id);
         }
-        public void Insert(LandPlots user)
+        public void Insert(LandPlots landPlot)
         {
-            _landPlotRepository.Insert(user);
+            _landPlotRepository.Insert(landPlot);
         }
-        public void Update(LandPlots user)
+        public void Update(LandPlots landPlot)
         {
-            _landPlotRepository.Update(user);
+            _landPlotRepository.Update(landPlot);
         }
 
         public void Delete(long id)

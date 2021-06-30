@@ -20,17 +20,17 @@ namespace FTS.Service.Services
         {
             return _furnitureRepository.GetAll();
         }
-        public Furnitures GetById(long userId)
+        public Furnitures GetById(long id)
         {
-            return _furnitureRepository.GetById(userId);
+            return _furnitureRepository.GetById(id);
         }
-        public void Insert(Furnitures user)
+        public void Insert(Furnitures furniture)
         {
-            _furnitureRepository.Insert(user);
+            _furnitureRepository.Insert(furniture);
         }
-        public void Update(Furnitures user)
+        public void Update(Furnitures furniture)
         {
-            _furnitureRepository.Update(user);
+            _furnitureRepository.Update(furniture);
         }
 
         public void Delete(long id)

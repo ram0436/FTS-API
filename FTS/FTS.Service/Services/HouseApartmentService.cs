@@ -20,17 +20,17 @@ namespace FTS.Service.Services
         {
             return _houseApartmentRepository.GetAll();
         }
-        public HouseApartments GetById(long userId)
+        public HouseApartments GetById(long id)
         {
-            return _houseApartmentRepository.GetById(userId);
+            return _houseApartmentRepository.GetById(id);
         }
-        public void Insert(HouseApartments user)
+        public void Insert(HouseApartments houseApartment)
         {
-            _houseApartmentRepository.Insert(user);
+            _houseApartmentRepository.Insert(houseApartment);
         }
-        public void Update(HouseApartments user)
+        public void Update(HouseApartments houseApartment)
         {
-            _houseApartmentRepository.Update(user);
+            _houseApartmentRepository.Update(houseApartment);
         }
 
         public void Delete(long id)

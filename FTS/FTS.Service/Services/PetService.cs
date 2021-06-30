@@ -20,17 +20,17 @@ namespace FTS.Service.Services
         {
             return _petRepository.GetAll();
         }
-        public Pets GetById(long userId)
+        public Pets GetById(long id)
         {
-            return _petRepository.GetById(userId);
+            return _petRepository.GetById(id);
         }
-        public void Insert(Pets user)
+        public void Insert(Pets pet)
         {
-            _petRepository.Insert(user);
+            _petRepository.Insert(pet);
         }
-        public void Update(Pets user)
+        public void Update(Pets pet)
         {
-            _petRepository.Update(user);
+            _petRepository.Update(pet);
         }
 
         public void Delete(long id)

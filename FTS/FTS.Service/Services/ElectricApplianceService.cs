@@ -21,17 +21,17 @@ namespace FTS.Service.Services
         {
             return _electricApplianceRepository.GetAll();
         }
-        public ElectricAppliances GetById(long userId)
+        public ElectricAppliances GetById(long id)
         {
-            return _electricApplianceRepository.GetById(userId);
+            return _electricApplianceRepository.GetById(id);
         }
-        public void Insert(ElectricAppliances user)
+        public void Insert(ElectricAppliances electricAppliance)
         {
-            _electricApplianceRepository.Insert(user);
+            _electricApplianceRepository.Insert(electricAppliance);
         }
-        public void Update(ElectricAppliances user)
+        public void Update(ElectricAppliances electricAppliance)
         {
-            _electricApplianceRepository.Update(user);
+            _electricApplianceRepository.Update(electricAppliance);
         }
 
         public void Delete(long id)

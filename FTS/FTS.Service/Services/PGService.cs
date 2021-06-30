@@ -20,17 +20,17 @@ namespace FTS.Service.Services
         {
             return _pgRepository.GetAll();
         }
-        public PG GetById(long userId)
+        public PG GetById(long id)
         {
-            return _pgRepository.GetById(userId);
+            return _pgRepository.GetById(id);
         }
-        public void Insert(PG user)
+        public void Insert(PG pg)
         {
-            _pgRepository.Insert(user);
+            _pgRepository.Insert(pg);
         }
-        public void Update(PG user)
+        public void Update(PG pg)
         {
-            _pgRepository.Update(user);
+            _pgRepository.Update(pg);
         }
 
         public void Delete(long id)

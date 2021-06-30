@@ -20,17 +20,17 @@ namespace FTS.Service.Services
         {
             return _commercialServiceRepository.GetAll();
         }
-        public CommercialServices GetById(long userId)
+        public CommercialServices GetById(long id)
         {
-            return _commercialServiceRepository.GetById(userId);
+            return _commercialServiceRepository.GetById(id);
         }
-        public void Insert(CommercialServices user)
+        public void Insert(CommercialServices commercialService)
         {
-            _commercialServiceRepository.Insert(user);
+            _commercialServiceRepository.Insert(commercialService);
         }
-        public void Update(CommercialServices user)
+        public void Update(CommercialServices commercialService)
         {
-            _commercialServiceRepository.Update(user);
+            _commercialServiceRepository.Update(commercialService);
         }
 
         public void Delete(long id)

@@ -20,17 +20,17 @@ namespace FTS.Service.Services
         {
             return _jobRepository.GetAll();
         }
-        public Jobs GetById(long userId)
+        public Jobs GetById(long id)
         {
-            return _jobRepository.GetById(userId);
+            return _jobRepository.GetById(id);
         }
-        public void Insert(Jobs user)
+        public void Insert(Jobs job)
         {
-            _jobRepository.Insert(user);
+            _jobRepository.Insert(job);
         }
-        public void Update(Jobs user)
+        public void Update(Jobs job)
         {
-            _jobRepository.Update(user);
+            _jobRepository.Update(job);
         }
 
         public void Delete(long id)

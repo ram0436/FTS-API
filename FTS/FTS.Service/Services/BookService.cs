@@ -21,17 +21,17 @@ namespace FTS.Service.Services
         {
             return _bookRepository.GetAll();
         }
-        public Books GetById(long userId)
+        public Books GetById(long id)
         {
-            return _bookRepository.GetById(userId);
+            return _bookRepository.GetById(id);
         }
-        public void Insert(Books user)
+        public void Insert(Books book)
         {
-            _bookRepository.Insert(user);
+            _bookRepository.Insert(book);
         }
-        public void Update(Books user)
+        public void Update(Books book)
         {
-            _bookRepository.Update(user);
+            _bookRepository.Update(book);
         }
 
         public void Delete(long id)

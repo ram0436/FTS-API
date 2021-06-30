@@ -20,17 +20,17 @@ namespace FTS.Service.Services
         {
             return _officeShopRepository.GetAll();
         }
-        public OfficeShops GetById(long userId)
+        public OfficeShops GetById(long id)
         {
-            return _officeShopRepository.GetById(userId);
+            return _officeShopRepository.GetById(id);
         }
-        public void Insert(OfficeShops user)
+        public void Insert(OfficeShops officeShops)
         {
-            _officeShopRepository.Insert(user);
+            _officeShopRepository.Insert(officeShops);
         }
-        public void Update(OfficeShops user)
+        public void Update(OfficeShops officeShops)
         {
-            _officeShopRepository.Update(user);
+            _officeShopRepository.Update(officeShops);
         }
 
         public void Delete(long id)

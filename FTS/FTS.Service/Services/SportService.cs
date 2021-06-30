@@ -20,17 +20,17 @@ namespace FTS.Service.Services
         {
             return _sportRepository.GetAll();
         }
-        public Sports GetById(long userId)
+        public Sports GetById(long id)
         {
-            return _sportRepository.GetById(userId);
+            return _sportRepository.GetById(id);
         }
-        public void Insert(Sports user)
+        public void Insert(Sports sport)
         {
-            _sportRepository.Insert(user);
+            _sportRepository.Insert(sport);
         }
-        public void Update(Sports user)
+        public void Update(Sports sport)
         {
-            _sportRepository.Update(user);
+            _sportRepository.Update(sport);
         }
 
         public void Delete(long id)

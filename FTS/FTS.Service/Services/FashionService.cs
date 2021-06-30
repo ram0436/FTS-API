@@ -20,17 +20,17 @@ namespace FTS.Service.Services
         {
             return _fashionRepository.GetAll();
         }
-        public Fashion GetById(long userId)
+        public Fashion GetById(long id)
         {
-            return _fashionRepository.GetById(userId);
+            return _fashionRepository.GetById(id);
         }
-        public void Insert(Fashion user)
+        public void Insert(Fashion fashion)
         {
-            _fashionRepository.Insert(user);
+            _fashionRepository.Insert(fashion);
         }
-        public void Update(Fashion user)
+        public void Update(Fashion fashion)
         {
-            _fashionRepository.Update(user);
+            _fashionRepository.Update(fashion);
         }
 
         public void Delete(long id)
