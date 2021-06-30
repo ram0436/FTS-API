@@ -29,15 +29,15 @@ namespace FTS.API.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] Books user)
+        public void Post([FromBody] Books book)
         {
-            _bookService.Insert(user);
+            _bookService.Insert(book);
         }
 
         [HttpPut("{id}")]
-        public void Put(long id, [FromBody] Books user)
+        public void Put(long id, [FromBody] Books book)
         {
-            _bookService.Update(user);
+            _bookService.Update(book);
         }
 
         [HttpDelete("{id}")]

@@ -29,15 +29,15 @@ namespace FTS.API.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] Sports user)
+        public void Post([FromBody] Sports sport)
         {
-            _sportService.Insert(user);
+            _sportService.Insert(sport);
         }
 
         [HttpPut("{id}")]
-        public void Put(long id, [FromBody] Sports user)
+        public void Put(long id, [FromBody] Sports sport)
         {
-            _sportService.Update(user);
+            _sportService.Update(sport);
         }
 
         [HttpDelete("{id}")]

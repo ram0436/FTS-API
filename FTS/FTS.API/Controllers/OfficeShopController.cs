@@ -29,15 +29,15 @@ namespace FTS.API.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] OfficeShops user)
+        public void Post([FromBody] OfficeShops officeShop)
         {
-            _officeShopService.Insert(user);
+            _officeShopService.Insert(officeShop);
         }
 
         [HttpPut("{id}")]
-        public void Put(long id, [FromBody] OfficeShops user)
+        public void Put(long id, [FromBody] OfficeShops officeShop)
         {
-            _officeShopService.Update(user);
+            _officeShopService.Update(officeShop);
         }
 
         [HttpDelete("{id}")]

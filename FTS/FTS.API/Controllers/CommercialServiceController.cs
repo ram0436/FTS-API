@@ -29,15 +29,15 @@ namespace FTS.API.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] CommercialServices user)
+        public void Post([FromBody] CommercialServices commercialService)
         {
-            _commercialServiceService.Insert(user);
+            _commercialServiceService.Insert(commercialService);
         }
 
         [HttpPut("{id}")]
-        public void Put(long id, [FromBody] CommercialServices user)
+        public void Put(long id, [FromBody] CommercialServices commercialService)
         {
-            _commercialServiceService.Update(user);
+            _commercialServiceService.Update(commercialService);
         }
 
         [HttpDelete("{id}")]

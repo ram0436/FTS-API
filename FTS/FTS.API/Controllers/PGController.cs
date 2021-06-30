@@ -29,15 +29,15 @@ namespace FTS.API.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] PG user)
+        public void Post([FromBody] PG pg)
         {
-            _pGService.Insert(user);
+            _pGService.Insert(pg);
         }
 
         [HttpPut("{id}")]
-        public void Put(long id, [FromBody] PG user)
+        public void Put(long id, [FromBody] PG pg)
         {
-            _pGService.Update(user);
+            _pGService.Update(pg);
         }
 
         [HttpDelete("{id}")]

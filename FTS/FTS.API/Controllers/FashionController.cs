@@ -29,15 +29,15 @@ namespace FTS.API.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] Fashion user)
+        public void Post([FromBody] Fashion fashion)
         {
-            _fashionService.Insert(user);
+            _fashionService.Insert(fashion);
         }
 
         [HttpPut("{id}")]
-        public void Put(long id, [FromBody] Fashion user)
+        public void Put(long id, [FromBody] Fashion fashion)
         {
-            _fashionService.Update(user);
+            _fashionService.Update(fashion);
         }
 
         [HttpDelete("{id}")]

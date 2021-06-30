@@ -29,15 +29,15 @@ namespace FTS.API.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] Gadgets user)
+        public void Post([FromBody] Gadgets gadget)
         {
-            _gadgetService.Insert(user);
+            _gadgetService.Insert(gadget);
         }
 
         [HttpPut("{id}")]
-        public void Put(long id, [FromBody] Gadgets user)
+        public void Put(long id, [FromBody] Gadgets gadget)
         {
-            _gadgetService.Update(user);
+            _gadgetService.Update(gadget);
         }
 
         [HttpDelete("{id}")]

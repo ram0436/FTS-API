@@ -29,15 +29,15 @@ namespace FTS.API.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] Jobs user)
+        public void Post([FromBody] Jobs job)
         {
-            _jobService.Insert(user);
+            _jobService.Insert(job);
         }
 
         [HttpPut("{id}")]
-        public void Put(long id, [FromBody] Jobs user)
+        public void Put(long id, [FromBody] Jobs job)
         {
-            _jobService.Update(user);
+            _jobService.Update(job);
         }
 
         [HttpDelete("{id}")]

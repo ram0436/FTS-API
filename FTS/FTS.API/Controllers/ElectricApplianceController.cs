@@ -29,15 +29,15 @@ namespace FTS.API.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] ElectricAppliances user)
+        public void Post([FromBody] ElectricAppliances electricAppliance)
         {
-            _electricApplianceService.Insert(user);
+            _electricApplianceService.Insert(electricAppliance);
         }
 
         [HttpPut("{id}")]
-        public void Put(long id, [FromBody] ElectricAppliances user)
+        public void Put(long id, [FromBody] ElectricAppliances electricAppliance)
         {
-            _electricApplianceService.Update(user);
+            _electricApplianceService.Update(electricAppliance);
         }
 
         [HttpDelete("{id}")]

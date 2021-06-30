@@ -29,15 +29,15 @@ namespace FTS.API.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] Furnitures user)
+        public void Post([FromBody] Furnitures furniture)
         {
-            _furnitureService.Insert(user);
+            _furnitureService.Insert(furniture);
         }
 
         [HttpPut("{id}")]
-        public void Put(long id, [FromBody] Furnitures user)
+        public void Put(long id, [FromBody] Furnitures furniture)
         {
-            _furnitureService.Update(user);
+            _furnitureService.Update(furniture);
         }
 
         [HttpDelete("{id}")]

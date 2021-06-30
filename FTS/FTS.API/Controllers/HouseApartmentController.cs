@@ -29,15 +29,15 @@ namespace FTS.API.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] HouseApartments user)
+        public void Post([FromBody] HouseApartments houseApartment)
         {
-            _houseApartmentService.Insert(user);
+            _houseApartmentService.Insert(houseApartment);
         }
 
         [HttpPut("{id}")]
-        public void Put(long id, [FromBody] HouseApartments user)
+        public void Put(long id, [FromBody] HouseApartments houseApartment)
         {
-            _houseApartmentService.Update(user);
+            _houseApartmentService.Update(houseApartment);
         }
 
         [HttpDelete("{id}")]

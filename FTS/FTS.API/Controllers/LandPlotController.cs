@@ -29,15 +29,15 @@ namespace FTS.API.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] LandPlots user)
+        public void Post([FromBody] LandPlots landPlot)
         {
-            _landPlotService.Insert(user);
+            _landPlotService.Insert(landPlot);
         }
 
         [HttpPut("{id}")]
-        public void Put(long id, [FromBody] LandPlots user)
+        public void Put(long id, [FromBody] LandPlots landPlot)
         {
-            _landPlotService.Update(user);
+            _landPlotService.Update(landPlot);
         }
 
         [HttpDelete("{id}")]

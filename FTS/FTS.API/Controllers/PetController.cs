@@ -29,15 +29,15 @@ namespace FTS.API.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] Pets user)
+        public void Post([FromBody] Pets pet)
         {
-            _petService.Insert(user);
+            _petService.Insert(pet);
         }
 
         [HttpPut("{id}")]
-        public void Put(long id, [FromBody] Pets user)
+        public void Put(long id, [FromBody] Pets pet)
         {
-            _petService.Update(user);
+            _petService.Update(pet);
         }
 
         [HttpDelete("{id}")]
