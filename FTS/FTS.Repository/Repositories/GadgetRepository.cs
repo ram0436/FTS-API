@@ -14,7 +14,6 @@ namespace FTS.Repository.Repositories
     {
         private new readonly FTSDbContext _dbContext = null;
         protected new DbSet<Gadgets> _dbSet;
-        private bool disposedValue = false;
         public GadgetRepository()
         {
             _dbContext = new FTSDbContext();
@@ -24,18 +23,6 @@ namespace FTS.Repository.Repositories
         {
             _dbContext = context;
             _dbSet = _dbContext.Set<Gadgets>();
-        }
-
-        public new void Dispose()
-        {
-            if (!disposedValue)
-            {
-                if (_dbContext != null)
-                {
-                    _dbContext.Dispose();
-                }
-                disposedValue = true;
-            }
         }
     }
 }

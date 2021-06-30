@@ -10,11 +10,10 @@ using System.Threading.Tasks;
 
 namespace FTS.Repository.Repositories
 {
-    public class BookRepository : GenericRepository<Books>, IBookRepository, IDisposable
+    public class BookRepository : GenericRepository<Books>, IBookRepository
     {
         private new readonly FTSDbContext _dbContext = null;
         protected new DbSet<Books> _dbSet;
-        private bool disposedValue = false;
         public BookRepository()
         {
             _dbContext = new FTSDbContext();
@@ -24,18 +23,6 @@ namespace FTS.Repository.Repositories
         {
             _dbContext = context;
             _dbSet = _dbContext.Set<Books>();
-        }
-
-        public new void Dispose()
-        {
-            if (!disposedValue)
-            {
-                if (_dbContext != null)
-                {
-                    _dbContext.Dispose();
-                }
-                disposedValue = true;
-            }
         }
     }
 }

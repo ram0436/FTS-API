@@ -14,7 +14,6 @@ namespace FTS.Repository.Repositories
     {
         private new readonly FTSDbContext _dbContext = null;
         protected new DbSet<Users> _dbSet;
-        private bool disposedValue = false;
         public UserRepository()
         {
             _dbContext = new FTSDbContext();
@@ -31,17 +30,5 @@ namespace FTS.Repository.Repositories
         //{
         //    return _dbContext.Users.FromSqlRaw<Users>("uspGetUserById {0}",id).ToList().FirstOrDefault();
         //}
-
-        public new void Dispose()
-        {
-            if (!disposedValue)
-            {
-                if (_dbContext != null)
-                {
-                    _dbContext.Dispose();
-                }
-                disposedValue = true;
-            }
-        }
     }
 }
