@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static FTS.Configuration.Enum.EnumList;
 
 namespace FTS.Model.Entities
 {
@@ -15,6 +16,7 @@ namespace FTS.Model.Entities
         public long Id { get; set; }
         public string UserId { get; set; }
         public string Password { get; set; }
+        public Role Role { get; set; } = Role.User;
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Mobile { get; set; }

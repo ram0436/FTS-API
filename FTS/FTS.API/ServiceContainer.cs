@@ -11,6 +11,7 @@ namespace FTS.API
         public static void AddService(this IServiceCollection services)
         {
             // Service Container
+            services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IBookService, BookService>();
             services.AddScoped<ICommercialServiceService, CommercialServiceService>();

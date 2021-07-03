@@ -137,5 +137,11 @@ namespace FTS.Configuration.Enum
             Women = 2,
             Kids = 3
         }
+       public enum Role
+        {
+            SuperAdmin =  1,
+            Admin = 2,
+            User = 3
+        }
     }
 }
